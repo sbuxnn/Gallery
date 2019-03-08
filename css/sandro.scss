@@ -1,0 +1,207 @@
+
+$mainColor: #000;
+$second-mainColor: #fff;
+
+%icons{
+  position: absolute;
+  margin: 7px 0 0 7px;
+  color:  $mainColor;
+  opacity: 0.2;
+  font-size: 15px;
+}
+
+body{
+  background-color: $mainColor;
+}
+.title{
+  color: $second-mainColor;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.container{
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.carousel{
+  margin-top: 30vh;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  //Показывает, что дочерний элемент должен быть спозиционирован в 3D-пространстве.
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.pic{
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  opacity: 1;
+}
+// .pic.active{
+//   cursor: grabbing;
+//   cursor: -webkit-grabbing;
+//   transform: scale(1.4);
+//   background-color: rgba(255,255,255,0.3);
+// }
+.first{
+  transform: rotateY(0deg)
+  translateZ(400px);
+  background-image: url("img/theBirthOfVenus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+ &.active{
+    pointer-events: none;
+ }
+}
+.second{
+ transform: rotateY(60deg) translateZ(400px);
+ background: $mainColor;
+   background-image: url("img/primavera.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+&.active{
+  pointer-events: none;
+}
+}
+.third{
+  transform: rotateY(120deg) translateZ(400px);
+  background: $mainColor;
+   background-image: url("img/kleveta.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   &.active{
+     pointer-events: none;
+   }
+}
+.fourth{
+transform: rotateY(180deg) translateZ(400px);
+background: $mainColor;
+ background-image: url("img/venusandmars.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ &.active{
+   pointer-events: none;
+ }
+}
+.fifth{
+  transform: rotateY(240deg) translateZ(400px);
+  background: $mainColor;
+  background-image: url("img/chris.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.active{
+    pointer-events: none;
+  }
+}
+.sixth{
+  transform: rotateY(300deg) translateZ(400px);
+  background: $mainColor;
+  background-image: url("img/6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.active{
+    pointer-events: none;
+  }
+}
+i{
+
+  opacity: 0.5;
+  position: absolute;
+  color: $second-mainColor;
+}
+.left{
+  margin: 5vh 0 0 -30vw;
+}
+.right{
+  margin: 5vh 0 0 57vw;
+}
+
+.appearingBlock{
+  opacity: 1;
+  display: none;
+  width: 400px;
+  height: 300px;
+  background-color: $second-mainColor;
+  z-index: 1000;
+  animation: appearance 0.3s;
+  margin-top: -15px;
+}
+@keyframes appearance{
+  0%{
+    opacity: 0.2;
+  }
+  25%{
+      opacity: 0.5;
+  }
+  50%{
+      opacity: 0.7;
+  }
+  80%{
+      opacity: 0.9;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+.cancel{
+  z-index: 20000;
+  // display: none;
+  color: $mainColor;
+}
+.articel{
+  margin: 10px;
+  font-size: 10px;
+  text-align: justify;
+  opacity: 0.8;
+}
+.small-picture{
+  margin: 35px 5px 0px 10px;
+  float: left;
+}
+
+.heart{
+  @extend %icons;
+  margin: 7px 0 0 7px;
+
+  &.active{
+    color: red;
+    opacity: 0.9;
+  }
+  &:hover{
+    color: red;
+    opacity: 0.9;
+
+  }
+}
+.fa-share-square{
+    @extend %icons;
+    margin-left: 30px;
+    &.active{
+      opacity: 0.9;
+    }
+    &:hover{
+      opacity: 0.9;
+    }
+}
+.block-title{
+  margin-right: 100px;
+}
+
+// .titlePic{
+//   height: 400px;
+//   position: relative;
+//   margin: 20px 0 0 0;
+//   font-size: 30px;
+//   opacity: 0;
+//   color: $second-mainColor;
+//
+//   &:hover{
+//     opacity: 0.8;
+//   }
+// }

@@ -1,0 +1,157 @@
+.heart, .fa-share-square {
+  position: absolute;
+  margin: 7px 0 0 7px;
+  color: #000;
+  opacity: 0.2;
+  font-size: 15px; }
+
+body {
+  background-color: #000; }
+
+.title {
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center; }
+
+.container {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  perspective: 1000px; }
+
+.carousel {
+  margin-top: 30vh;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s; }
+
+.pic {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  opacity: 1; }
+
+.first {
+  transform: rotateY(0deg) translateZ(400px);
+  background-image: url("img/theBirthOfVenus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .first.active {
+    pointer-events: none; }
+
+.second {
+  transform: rotateY(60deg) translateZ(400px);
+  background: #000;
+  background-image: url("img/primavera.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .second.active {
+    pointer-events: none; }
+
+.third {
+  transform: rotateY(120deg) translateZ(400px);
+  background: #000;
+  background-image: url("img/kleveta.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .third.active {
+    pointer-events: none; }
+
+.fourth {
+  transform: rotateY(180deg) translateZ(400px);
+  background: #000;
+  background-image: url("img/venusandmars.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .fourth.active {
+    pointer-events: none; }
+
+.fifth {
+  transform: rotateY(240deg) translateZ(400px);
+  background: #000;
+  background-image: url("img/chris.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .fifth.active {
+    pointer-events: none; }
+
+.sixth {
+  transform: rotateY(300deg) translateZ(400px);
+  background: #000;
+  background-image: url("img/6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .sixth.active {
+    pointer-events: none; }
+
+i {
+  opacity: 0.5;
+  position: absolute;
+  color: #fff; }
+
+.left {
+  margin: 5vh 0 0 -30vw; }
+
+.right {
+  margin: 5vh 0 0 57vw; }
+
+.appearingBlock {
+  opacity: 1;
+  display: none;
+  width: 400px;
+  height: 300px;
+  background-color: #fff;
+  z-index: 1000;
+  animation: appearance 0.3s;
+  margin-top: -15px; }
+
+@keyframes appearance {
+  0% {
+    opacity: 0.2; }
+  25% {
+    opacity: 0.5; }
+  50% {
+    opacity: 0.7; }
+  80% {
+    opacity: 0.9; }
+  100% {
+    opacity: 1; } }
+.cancel {
+  z-index: 20000;
+  color: #000; }
+
+.articel {
+  margin: 10px;
+  font-size: 10px;
+  text-align: justify;
+  opacity: 0.8; }
+
+.small-picture {
+  margin: 35px 5px 0px 10px;
+  float: left; }
+
+.heart {
+  margin: 7px 0 0 7px; }
+  .heart.active {
+    color: red;
+    opacity: 0.9; }
+  .heart:hover {
+    color: red;
+    opacity: 0.9; }
+
+.fa-share-square {
+  margin-left: 30px; }
+  .fa-share-square.active {
+    opacity: 0.9; }
+  .fa-share-square:hover {
+    opacity: 0.9; }
+
+.block-title {
+  margin-right: 100px; }
+
+/*# sourceMappingURL=sandro.css.map */
